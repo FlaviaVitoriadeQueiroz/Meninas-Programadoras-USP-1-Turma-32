@@ -1,0 +1,210 @@
+1 Como saber quem é a mais velha de 4 irmãs?
+idade1= int (input())
+idade2= int (input())
+idade3= int (input())
+idade4= int (input())
+maisvelha= idade1
+if idade2> maisvelha:
+  maisvelha= idade2
+if idade3> maisvelha:
+  maisvelha= idade3
+if idade4> maisvelha:
+  maisvelha= idade4
+print(f'A mais velha tem {maisvelha} anos')
+
+2 Qual a cor correspondente a cada parte da bandeira nacional do Brasil?
+cor= input()
+if cor== 'azul':
+  print('circunferência')
+elif cor== 'amarelo':
+  print('losango')
+elif cor== 'verde':
+  print('retângulo')
+elif cor== 'branco':
+  print('faixa')
+else:
+  print('não tem essa cor')
+
+3 Tal número está dentro do intervalo?
+valor1= int (input())
+valor2= int (input())
+valorm= int (input())
+if valorm >= valor1 and valorm <= valor2 or valorm >= valor2 and valorm <= valor1:
+   print("True")
+else:
+   print("False")
+
+4 Diferencie vogal de algarismo de caracterios especiais
+entrada= input()
+if entrada in '1234567890':
+  print('algarismo')
+elif entrada in '@#$%&*()_-+=!':
+  print('especial')
+elif entrada in 'AEIOUaeiou':
+  print('vogal')
+else:
+  print('outro')
+
+5 Tais caracteres estão dentro de tal sequência?
+sequencia= input()
+palavra= input()
+if sequencia in palavra:
+  print(f'{sequencia} in {palavra}')
+else:
+  print(f'{sequencia} not in {palavra}')
+
+6 Qual é o menor valor?
+valor1= int (input())
+valor2= int (input())
+if valor1>valor2 :
+  print(f'maior: {valor1}')
+  print(f'menor: {valor2}')
+else:
+  valor1<valor2
+  print(f'maior: {valor2}')
+  print(f'menor: {valor1}')
+
+7 É verdadeiro ou falso?
+letra1= input()
+letra2= input()
+if letra1== 'V' and letra2== 'V':
+  print('VV')
+elif letra1=='F' and letra2== 'F':
+  print('FF')
+else:
+  print('?')
+
+8 Delta
+a= float(input())
+b= float(input())
+c= float(input())
+delta= b**2- 4*a*c
+if delta> 0:
+    print(2)
+elif delta== 0:
+    print(1)
+else:
+    print(0)
+
+9 Determine o século
+ano= int (input())
+seculo= (ano//100) + (1 if ano % 100 !=0 else 0)
+print(seculo)
+
+10 Determine os número romanos
+letra= input()
+if letra=='I':
+  print('1')
+elif letra=='V':
+  print('5')
+elif letra=='X':
+  print('10')
+elif letra=='L':
+  print('50')
+elif letra=='C':
+  print('100')
+elif letra=='D':
+  print('500')
+elif letra=='M':
+  print('1000')
+
+11 Ache e encaminhe o último dígito
+placa= int (input())
+digito= placa % 10
+if digito== 1 or digito== 2:
+  print('segunda-feira')
+elif digito==3 or digito==4:
+  print('terça-feira')
+elif digito==5 or digito==6:
+  print('quarta-feira')
+elif digito==7 or digito==8:
+  print('quinta-feira')
+elif digito==9 or digito==0:
+  print('sexta-feira')
+
+12 Ache o último dígito
+placa= int (input())
+digito= placa % 10
+print(digito)
+
+13 É obrigatório ou facultativo votar
+idade= int (input())
+if idade>=70:
+  print('Seu voto é facultativo: você pode votar ou não')
+elif idade<=69 and idade>=18:
+  print('Seu voto é obrigatório')
+elif idade<=15:
+  print('Jovem demais para votar, espere até 16')
+elif idade>=16 and idade<=17:
+  print('Seu voto é facultativo: você pode votar ou não')
+
+14 print referente a maior/igual ou menor que 60
+idade= int (input())
+if idade>=60:
+  print(f'{idade} Melhor idade!') #sem o f de formatação a saída fica {idade} Melhor idade!
+print('Fim')
+
+15 Horas de sono suficiente
+horas= float (input())
+if horas== 8:
+  print('Você dormiu o suficiente, continue assim!')
+elif horas>= 8:
+  print('Você dormiu muito bem, parabéns!')
+elif horas<= 8:
+  print('Você precisa de mais tempo de sono, cuide-se!')
+
+16 Tal caracterio corresponde a qual ação no jogo?
+tecla= input()
+if tecla== 'a' or tecla== 'A':
+  print('LEFT')
+elif tecla== 'w' or tecla== 'W':
+  print('UP')
+elif tecla== 'd' or tecla== 'D':
+  print('RIGHT')
+elif tecla== 's' or tecla== 'S':
+  print('DOWN')
+elif tecla != 'a' or 'A' or 'w' or 'W' or 'd' or 'D' or 'S' or 's':
+  print('?')
+
+17 Posso comprar?
+valor1= int(input())
+valor2= int (input())
+if valor1<=valor2:
+  print('seu saldo é insuficiente para essa compra')
+elif valor1>valor2:
+  saldo= valor1-valor2
+  print(f'se você comprar tudo o saldo será: {saldo}')
+
+18 Tenho dinheiro para comprar?
+valor1= int (input())
+valor2= int (input())
+if valor1 >= valor2:
+  print('pode comprar tudo')
+elif valor1 <= valor2:
+  print('saldo insuficiente')
+
+19 Conta
+operação= input()
+valor1= int (input())
+valor2= int (input())
+if operação== '+':
+  calculo= valor1+valor2
+  print(calculo)
+elif operação== '-':
+  calculo= valor1-valor2
+  print(calculo)
+elif operação== '*':
+  calculo= valor1*valor2
+  print(calculo)
+elif operação== '/':
+  calculo= valor1/valor2
+  print(calculo)
+elif operação== '%':
+  calculo= valor1%valor2
+  print(calculo)
+elif operação== '**':
+  calculo= valor1**valor2
+  print(calculo)
+elif operação== '//':
+  calculo= valor1//valor2
+  print(calculo)
